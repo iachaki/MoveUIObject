@@ -10,6 +10,13 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    //weak:変数が弱参照、var:変数、!:変数がアンラップ・オプショナルであるということ
+    @IBOutlet weak var redRect: UIView!
+    
+    //ドラッグで追加！
+    @IBAction func doMove(sender: AnyObject) {
+        println("doMoveがタップされました")
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
