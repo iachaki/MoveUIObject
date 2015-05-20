@@ -12,10 +12,16 @@ class ViewController: UIViewController {
 
     //weak:変数が弱参照、var:変数、!:変数がアンラップ・オプショナルであるということ
     @IBOutlet weak var redRect: UIView!
-    
     //ドラッグで追加！
     @IBAction func doMove(sender: AnyObject) {
         println("doMoveがタップされました")
+        println("移動前の座標:\(redRect.center)")
+        
+        let x = redRect.center.x + 10
+        let y = redRect.center.y
+        
+        let newPoint = CGPointMake(x, y)
+        redRect.center = newPoint
     }
     override func viewDidLoad() {
         super.viewDidLoad()
